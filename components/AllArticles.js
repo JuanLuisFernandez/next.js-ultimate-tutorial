@@ -9,6 +9,7 @@ const AllArticles = ({ blok, locale }) => {
     const getArticles = async () => {
       const storyblokApi = getStoryblokApi();
       const { data } = await storyblokApi.get(`cdn/stories`, {
+        version: "draft",
         starts_with: 'blog/',
         is_startpage: false
       });
